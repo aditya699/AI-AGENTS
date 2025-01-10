@@ -1,2 +1,6 @@
 # AI-AGENTS
 AI AGENTS Full Guide
+
+Lecture 1: Prompting chaining , Response Sanitization , Structured Outputs
+
+
