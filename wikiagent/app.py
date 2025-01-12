@@ -13,11 +13,21 @@ os.environ["GOOGLE_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-st.header("Wiki Single Page Generator")
-st.write("This is a simple agent that will help you generate a wiki page using Python and Langchain.")
-st.write("This should be used for projects where you want to generate a single page wiki for a project.")
+st.set_page_config(page_title="Wiki Page Generator", page_icon="📝", layout="wide")
 
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest")
+st.title("📝 Wiki Single Page Generator")
+
+st.markdown("""
+<div style='background-color: #f0f2f6; padding: 20px; border-radius: 10px; margin-bottom: 20px'>
+    <h4>Welcome to the Wiki Generator!</h4>
+    <p>This tool helps you create professional wiki pages for your projects using Python and Langchain.</p>
+    <p>Simply fill in the details below to generate a well-structured wiki page.</p>
+</div>
+""", unsafe_allow_html=True)
+
+st.warning("⚠️ Note: This is a beta version. You may experience quota limits.", icon="⚠️")
+
+llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp",temperature=0)
 
 # Input fields
 project_description = st.text_area("Enter the project description:")
@@ -43,10 +53,11 @@ if st.button("Generate Wiki"):
         Redraft the project description in a way that is more clear.so that any one who reads it can understand it.(Never add any other information to the project description which is not given to you)
 
         Always follow the XML format strictly(only output the XML format, nothing else).
-
+        '''xml
         <project_description>
         Enter here the redrafted project description.
         </project_description>
+        '''
         """
 
         def extract_project_description(text):
@@ -67,10 +78,11 @@ if st.button("Generate Wiki"):
         You need to write a methodology for the project.
 
         Always follow the XML format strictly(only output the XML format, nothing else).
-
+        '''xml
         <methodology>
         Enter here the methodology focussing on what the developer did.
         </methodology>
+        '''
         """
 
         def extract_methodology(text):
@@ -92,17 +104,19 @@ if st.button("Generate Wiki"):
 
         You need to write a tech stack used for the project.
 
-        Always follow the XML format strictly(only output the XML format, nothing else).
-
+        Always follow this XML format strictly(only output the XML format, nothing else).
+        '''xml
         <tech_stack>
         Enter here the tech stack.
         </tech_stack>
+        '''
         """
 
         def extract_tech_stack(text):
             return text.split('```')[1].split('<tech_stack>')[1].split("</tech_stack>")[0].strip()
 
         worker3_response = llm.invoke(worker3_prompt)
+        print(worker3_response.content)
         tech_stack = extract_tech_stack(worker3_response.content)
         st.write("Tech Stack:", tech_stack)
 
@@ -120,11 +134,12 @@ if st.button("Generate Wiki"):
 
         You need to write a other notes for the project.
 
-        Always follow the XML format strictly(only output the XML format, nothing else).
-
+        Always follow this XML format strictly(only output the XML format, nothing else).
+        '''xml
         <other_notes>
         Enter here the other notes.
         </other_notes>
+        '''
         """
 
         def extract_other_notes(text):
@@ -133,6 +148,9 @@ if st.button("Generate Wiki"):
         worker4_response = llm.invoke(worker4_prompt)
         other_notes = extract_other_notes(worker4_response.content)
         st.write("Other Notes:", other_notes)
+
+
+    llm=ChatGoogleGenerativeAI(model="gemini-1.5-pro",temperature=0)
 
     with st.spinner("Generating mermaid chart..."):
         worker5_prompt = f"""
@@ -170,11 +188,12 @@ if st.button("Generate Wiki"):
         Always have [text] for nodes.do not use brackets or any other special characters inside the brackets([]).
   
 
-        Always follow the XML format strictly(only output the XML format, nothing else).
-
+        Always follow this XML format strictly(only output the XML format, nothing else).
+        '''xml
         <mermaid_chart>
         Enter here the mermaid chart.
         </mermaid_chart>
+        '''
         """
 
         def extract_mermaid_chart(text):
@@ -184,13 +203,14 @@ if st.button("Generate Wiki"):
         mermaid_chart = extract_mermaid_chart(worker5_response.content)
         st.write("Mermaid Chart:", mermaid_chart)
 
+   
     with st.spinner("Validating mermaid chart..."):
         worker7_prompt = f"""
         You are a mermaid chart expert.
 
         You are given a mermaid chart: {mermaid_chart}
 
-        Make sure the syntax is correct by validating it with the fact that [] is used for nodes and () is not used.Inside the brackets [] we should not use any other special characters or brackets().
+        Make sure the syntax is correct by validating it with the fact that [] is used for nodes and () is not used.Inside the brackets [] we should not use any other special characters or brackets().A Simple flow diagram is what is needed rather than styles and all just arrows and nodes.
 
         Do not add any other information to the mermaid chart.
         example Input:
@@ -203,7 +223,6 @@ if st.button("Generate Wiki"):
         E --> F[Random Forest Model Scikit-learn];
         F --> G[Sales Forecast];
         G --> A;
-         
         ```
         example Output:
         ```mermaid
@@ -219,9 +238,11 @@ if st.button("Generate Wiki"):
 
         Always follow this XML format strictly(only output the XML format, nothing else).
 
+        '''xml
         <mermaid_chart>
         Enter here the mermaid chart.
         </mermaid_chart>
+        '''
         """
 
         def extract_mermaid_chart(text):
@@ -230,7 +251,7 @@ if st.button("Generate Wiki"):
         worker7_response = llm.invoke(worker7_prompt)
         mermaid_chart = extract_mermaid_chart(worker7_response.content)
         st.write("Mermaid Chart:", mermaid_chart)
-
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp",temperature=0)
 
     with st.spinner("Generating learning..."):
         worker6_prompt = f"""
@@ -244,9 +265,11 @@ if st.button("Generate Wiki"):
 
         Always follow this XML format strictly(only output the XML format, nothing else).
 
+        '''xml
         <learning>
         Enter here the learning.(Only the learning, nothing else)
         </learning>
+        '''
         """
 
 
@@ -280,11 +303,13 @@ if st.button("Generate Wiki"):
 
         You need to generate a md file for the project.(Make sure to add following to the md file: Project Description, Methodology, Tech Stack, Other Notes, Mermaid Chart(Architecture), Urls(If any), and Learning)
 
-        Always follow the XML format strictly(only output the XML format, nothing else).
+        Always follow this XML format strictly(only output the XML format, nothing else).
 
+        '''xml
         <md_file>
         Enter here the md file.
         </md_file>
+        '''
         """
 
         def extract_md_file(text):
@@ -292,7 +317,6 @@ if st.button("Generate Wiki"):
             Extracts content between <md_file> tags from a text string, handling nested code blocks
             including Mermaid charts.
             """
-            import re
             
             clean_text = text.strip('`')
             if clean_text.startswith('xml'):
