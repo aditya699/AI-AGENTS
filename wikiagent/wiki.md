@@ -1,47 +1,40 @@
-# Project: Predict 2025 Sales
+# Raw Material Classification Project
 
 ## Project Description
 
-This project involved developing a machine learning model to predict sales for the year 2025 for a client.
+This project involved classifying raw materials into categories. This categorization provided a cost breakdown for each category.
 
 ## Methodology
 
-A machine learning model was developed to predict sales for the year 2025.  An XGBoost model was trained for this purpose.
+The project employed a Large Language Model (LLM), Gemini, within the Langchain framework to classify raw materials. The input consisted of raw material data, and the Gemini LLM, via Langchain, processed this data to categorize the materials. Each category was then assigned a cost, resulting in a cost breakdown per category. The methodology relied entirely on Gemini's classification capabilities and Langchain's orchestration to achieve the categorization and subsequent cost analysis.
 
 ## Tech Stack
 
-* Python
-* scikit-learn
-* Optuna
-* XGBoost
+* python
+* gemini
+* langchain
+
+## Other Notes
+
+Used Gemini LLM and Langchain framework with Python. Basic approach with examples provided to the model. Achieved 80% accuracy in raw material categorization and cost breakdown.
 
 ## Mermaid Chart
 
 ```mermaid
 graph LR
-A[Project: Predict 2025 Sales] --> B(Trained ML Model);
-B --> C{XGBoost};
-C --> D[Python];
-D --> E[Scikit-learn];
-D --> F[Optuna];
-subgraph " "
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#ccf,stroke:#333,stroke-width:2px
-    style C fill:#ccf,stroke:#333,stroke-width:2px
-    style D fill:#ccf,stroke:#333,stroke-width:2px
-    style E fill:#ccf,stroke:#333,stroke-width:2px
-    style F fill:#ccf,stroke:#333,stroke-width:2px
-
-end
-G[Ask for dashboard design early on] --> A;
+A[Project: Raw Material Classification] --> B(Categorization);
+B --> C{Cost Breakdown};
+C --> D[Gemini LLM];
+D --> E[Langchain Framework];
+E --> F[Python];
+F --> G((80% Accuracy));
+G --> H[Sticking to basics & examples];
 ```
 
-## Other Notes
+## Urls
 
-* No dashboard design discussed yet.
-* Model used: XGBoost (trained in Python using scikit-learn and Optuna).
-* Prediction target: 2025 sales.
+https://ai.google.dev/gemini-api/docs
 
-## URLs
+## Learning
 
-No URLs were used in this project.
+Few-shot prompting proved highly effective for classifying raw materials and generating associated cost breakdowns.

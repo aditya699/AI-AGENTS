@@ -1,6 +1,8 @@
 '''
 Can we create a simple agent that will help me generate a wiki page?
 
+NOTE:
+This is a simple agent that will help you generate a wiki page, which made using simple python and langchain no fancy stuff.
 '''
 import os
 from dotenv import load_dotenv
@@ -16,13 +18,13 @@ llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest")
 
 project_description=input("Enter the project description:")
 
-what_u_did=input("Enter what you did:")
+what_you_did=input("Enter what you did:")
 
-what_u_learned=input("Enter what you learned:")
+what_you_learned=input("Enter what you learned:")
 
 what_tech_stack_used=input("Enter what tech stack you used:")
 
-any_specail_message=input("Enter any special message:")
+any_special_message=input("Enter any special message:")
 
 did_you_use_any_urls=input("Did you use any urls?(enter yes or no)")
 
@@ -60,14 +62,14 @@ You are a Methodology expert.
 
 You are given a project description: {project_description}
 
-You are also given what the developer did: {what_u_did}.(Never add any other information to the methodology which is not given to you)
+You are also given what the developer did: {what_you_did}.(Never add any other information to the methodology which is not given to you)
 
 You need to write a methodology for the project.
 
 Always follow the XML format strictly(only output the XML format, nothing else).
 
 <methodology>
-Enter here the methodology.
+Enter here the methodology focussing on what the developer did.
 </methodology>
 """
 
@@ -85,7 +87,7 @@ You are a tech stack expert.
 
 You are given project description: {project_description}
 
-You are also given what the developer did: {what_u_did}.(Never add any other information to the tech stack which is not given to you)
+You are also given what the developer did: {what_you_did}.(Never add any other information to the tech stack which is not given to you)
 
 You are given what tech stack the developer used: {what_tech_stack_used}
 
@@ -112,11 +114,11 @@ You are a other notes expert.
 
 You are given a project description: {project_description}
 
-You are also given what the developer did: {what_u_did}
+You are also given what the developer did: {what_you_did}
 
 You are also given what tech stack the developer used: {what_tech_stack_used}.(Never add any other information to the other notes which is not given to you)
 
-You are also given any special message: {any_specail_message}.(Never add any other information to the other notes which is not given to you)
+You are also given any special message: {any_special_message}.(Never add any other information to the other notes which is not given to you)
 
 You need to write a other notes for the project.
 
@@ -141,11 +143,11 @@ You are a mermaid chart expert.(Never add any other information to the mermaid c
 
 You are given a project description: {project_description}
 
-You are also given what the developer did: {what_u_did}
+You are also given what the developer did: {what_you_did}
 
 You are also given what tech stack the developer used: {what_tech_stack_used}.(Never add any other information to the mermaid chart which is not given to you)
 
-You are also given any special message: {any_specail_message}.(Never add any other information to the mermaid chart which is not given to you)
+You are also given any special message: {any_special_message}.(Never add any other information to the mermaid chart which is not given to you)
 
 You need to give a mermaid chart for the project.
 
@@ -165,6 +167,31 @@ mermaid_chart=extract_mermaid_chart(worker5_response.content)
 
 print(mermaid_chart)
 
+worker6_prompt=f"""
+You are experrt in writing project learning.
+
+You are given a project description: {project_description}
+
+You are given what learning the developer got: {what_you_learned}.(Never add any other information to the learning which is not given to you)
+
+You need to write a learning for the project.
+
+Always follow the XML format strictly(only output the XML format, nothing else).
+
+<learning>
+Enter here the learning.
+</learning>
+"""
+
+def extract_learning(text):
+    return text.split('```')[1].split('<learning>')[1].split("</learning>")[0].strip()
+
+worker6_response=llm.invoke(worker6_prompt)
+
+learning=extract_learning(worker6_response.content)
+
+print(learning)
+
 main_prompt=f"""
 You are a md file expert.
 You need to generate a md file for the project.
@@ -181,7 +208,11 @@ Mermaid Chart: {mermaid_chart}
 
 Urls: {urls}
 
-You need to generate a md file for the project.(Make sure to add Mermaid Chart, Methodology, Tech Stack, Other Notes, and Urls(If any) to the md file)
+Learning: {learning}
+
+(Never add any other information to the md file which is not given to you)
+
+You need to generate a md file for the project.(Make sure to add following to the md file: Project Description, Methodology, Tech Stack, Other Notes, Mermaid Chart, Urls(If any), and Learning)
 
 Always follow the XML format strictly(only output the XML format, nothing else).
 
