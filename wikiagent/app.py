@@ -193,9 +193,7 @@ if st.button("Generate Wiki"):
         Make sure the syntax is correct.
 
         Do not add any other information to the mermaid chart.
-
-        Give the output in the XML format.(only output the XML format, nothing else)
-        example:
+                example:
         ```mermaid
             graph LR
             A[Project: Forecast Sales FY2025] --> B[Historical Data];
@@ -217,6 +215,9 @@ if st.button("Generate Wiki"):
 
         Always have [text] for nodes.do not use brackets or any other special characters inside the brackets([]).
 
+        Always follow the XML format strictly(only output the XML format, nothing else).
+
+        <mermaid_chart>
         <mermaid_chart>
         Enter here the mermaid chart.
         </mermaid_chart>
