@@ -1,4 +1,4 @@
-# ABC Corporation Gamma Soap Sales Forecasting for 2025
+# ABC Corporation Gamma Soap Sales Forecasting
 
 ## Project Description
 
@@ -7,38 +7,40 @@ This project assisted ABC Corporation in forecasting 2025 sales for their Gamma 
 
 ## Methodology
 
+**Project Title:** ABC Corporation Gamma Soap Sales Forecasting
+
 **Project Goal:** Forecast 2025 sales for ABC Corporation's Gamma Soap product.
 
-**Data Acquisition:**
+**Phase 1: Data Acquisition and ETL**
 
-* **Source:** Historical Gamma Soap sales data stored in blob storage.
-* **Process:** Data was extracted from blob storage.
-
-**Data Transformation:**
-
-* **Platform:** Azure Synapse Analytics ETL pipeline.
+* **Description:** Historical Gamma Soap sales data was extracted from a blob storage location. An ETL pipeline was developed using Azure Synapse Analytics to process this data.
 * **Steps:**
-    * Data was transformed within the Azure Synapse Analytics ETL pipeline.
-    * Transformed data was loaded into SQL Server.
+    * Data Extraction from Blob Storage.
+    * Data Transformation within Azure Synapse Analytics.
+    * Data Loading into SQL Server.
 
-**Model Development:**
+**Phase 2: Model Development and Training**
 
-* **Algorithm:** Random Forest Regression.
-* **Implementation:** A Random Forest model was created using the transformed data in SQL Server.
+* **Description:** A Random Forest model was developed using the prepared data in SQL Server.
+* **Steps:**
+    * Random Forest model training using data from SQL Server.
 
-**Forecasting:**
+**Deliverables:**
 
-* **Method:** The developed Random Forest model was used to forecast 2025 sales.
+* ETL Pipeline (Azure Synapse Analytics).
+* SQL Server database containing transformed data.
+* Trained Random Forest model for Gamma Soap sales forecasting.
+* 2025 Sales Forecast.
 
 
 ## Tech Stack
 
-Python, Azure Synapse, SQL Server, scikit-learn (sklearn), pandas
+Python, Azure Synapse, sklearn, pandas, SQL Server, Blob Storage
 
 
 ## Other Notes
 
-Project assisted ABC Corporation in forecasting 2025 sales for their Gamma Soap product.  ETL pipeline developed on Azure Synapse, moving historical data from Blob storage, transforming it, and loading it into SQL Server.  A Random Forest model (using scikit-learn and pandas in Python) was created.  The resulting model provided a strong forecast (R-squared = 90%), enabling data-driven business decisions.
+Forecasted 2025 sales for ABC Corporation's Gamma Soap product using a Random Forest model (R2 = 90%). Data was sourced from blob storage, transformed via an ETL pipeline in Azure Synapse, and loaded into SQL Server for model training. Python, Azure Synapse, scikit-learn, and pandas were utilized. The resulting model provided insights to support improved business decision-making.
 
 
 ## Mermaid Chart (Architecture)
@@ -46,22 +48,28 @@ Project assisted ABC Corporation in forecasting 2025 sales for their Gamma Soap 
 ```mermaid
 graph LR
 A[Project: Forecast 2025 Gamma Soap Sales for ABC Corp] --> B[Historical Data in Blob Storage];
-B --> C[ETL Pipeline (Synapse)];
-C --> D[Data in SQL Server];
-D --> E[Random Forest Model];
-E --> F[Model Training (Python, sklearn)];
+B --> C[ETL Pipeline Synapse];
+C --> D[Data Transformation Pandas];
+D --> E[Data in SQL Server];
+E --> F[Random Forest Model sklearn];
 F --> G[Sales Forecast];
 G --> A;
 subgraph "Tech Stack"
-    C[Azure Synapse]
-    F[Python, sklearn, pandas]
+C[Synapse]
+F[Python]
+D[Pandas]
+E[SQL Server]
+F[sklearn]
 end
-subgraph "Metrics"
-    G[R2=90%]
+style A fill:#f9f,stroke:#333,stroke-width:2px
+style G fill:#ccf,stroke:#333,stroke-width:2px
+note right of G
+R2=90%
+Created a story to help the business take great decisions
 end
 ```
 
-## URLs
+## Urls
 
 No URL was used in this project.
 

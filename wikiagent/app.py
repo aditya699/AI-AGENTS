@@ -190,34 +190,35 @@ if st.button("Generate Wiki"):
 
         You are given a mermaid chart: {mermaid_chart}
 
-        Make sure the syntax is correct.
+        Make sure the syntax is correct by validating it with the fact that [] is used for nodes and () is not used.Inside the brackets [] we should not use any other special characters or brackets().
 
         Do not add any other information to the mermaid chart.
-                example:
+        example Input:
         ```mermaid
-            graph LR
-            A[Project: Forecast Sales FY2025] --> B[Historical Data];
-            B --> C[LSTM Arch];
-            C --> D[Neural Net Training];
-            D --> E[Azure VM GPU];
-            E --> F[PyTorch/Python];
-            F --> G[Sales Forecast];
-            G --> A;
-            subgraph "Tech Stack"
-            F
-            E
-            end
+        graph LR
+        A[Project: Forecast 2025 Sales for Gamma Soap (ABC Corp)] --> B[Historical Data Blob Storage];
+        B --> C[ETL Pipeline Synapse];
+        C --> D[Data Transformation Pandas];
+        D --> E[SQL Server];
+        E --> F[Random Forest Model Scikit-learn];
+        F --> G[Sales Forecast];
+        G --> A;
+         
+        ```
+        example Output:
+        ```mermaid
+        graph LR
+        A[Project: Forecast 2025 Sales for Gamma Soap ABC Corp] --> B[Historical Data Blob Storage]; #remove the brackets and the text inside the brackets  
+        B --> C[ETL Pipeline Synapse];
+        C --> D[Data Transformation Pandas];
+        D --> E[SQL Server];
+        E --> F[Random Forest Model Scikit-learn];
+        F --> G[Sales Forecast];
+        G --> A;
         ```
 
-   
-        Note: Do not use curly braces for nodes - use square brackets [] instead. Valid node shapes include:
-        - square/rectangle [text]
+        Always follow this XML format strictly(only output the XML format, nothing else).
 
-        Always have [text] for nodes.do not use brackets or any other special characters inside the brackets([]).
-
-        Always follow the XML format strictly(only output the XML format, nothing else).
-
-        <mermaid_chart>
         <mermaid_chart>
         Enter here the mermaid chart.
         </mermaid_chart>
