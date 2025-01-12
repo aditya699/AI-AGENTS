@@ -165,11 +165,11 @@ if st.button("Generate Wiki"):
             E
             end
         ```
-        Note: Please ensure your mermaid chart uses valid syntax and node shapes. Valid node shapes include:
-        - square/rectangle (default)
+
+        Note: Do not use curly braces for nodes - use square brackets [] instead. Valid node shapes include:
+        - square/rectangle [text]
         - circle [()]
         - rounded [()] 
-        - hexagon {{text}}
         - stadium [/text/]
         - subroutine [[text]]
         - cylinder [(text)]
@@ -219,22 +219,17 @@ if st.button("Generate Wiki"):
             end
         ```
 
-        Please check if the mermaid chart syntax is valid and contains only the following node shapes:
-        - 'SQE' (square/rectangle)
-        - 'DOUBLECIRCLEEND' (double circle)
-        - 'PE' (parentheses)
-        - '-)' (rounded)
-        - 'STADIUMEND' (stadium)
-        - 'SUBROUTINEEND' (subroutine)
-        - 'PIPE' (cylinder)
-        - 'CYLINDEREND' (cylinder)
-        - 'DIAMOND_STOP' (diamond)
-        - 'TAGEND' (tag)
-        - 'TRAPEND' (trapezoid)
-        - 'INVTRAPEND' (reverse trapezoid)
-        - 'UNICODE_TEXT' (text)
-        - 'TEXT' (text)
-        - 'TAGSTART' (tag)
+        Note: Do not use curly braces  for nodes - use square brackets "[]" instead. Valid node shapes include:
+        - square/rectangle [text]
+        - circle [()]
+        - rounded [()] 
+        - stadium [/text/]
+        - subroutine [[text]]
+        - cylinder [(text)]
+        - circle-double (((text)))
+        - asymmetric >text]
+        - trapezoid [/text\]
+        - reverse-trapezoid [\text/]
 
         <mermaid_chart>
         Enter here the mermaid chart.
