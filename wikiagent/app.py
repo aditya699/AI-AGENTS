@@ -237,16 +237,17 @@ if st.button("Generate Wiki"):
 
         You are given a project description: {project_description}
 
-        You are given what learning the developer got: {what_you_learned}.(Never add any other information to the learning which is not given to you)
+        You are given what learning the developer got: {what_you_learned}
 
-        You need to write a learning for the project.
+        You need to write  learning for the project.(Never add any other information to the learning which is not given to you)
 
-        Always follow the XML format strictly(only output the XML format, nothing else).
+        Always follow this XML format strictly(only output the XML format, nothing else).
 
         <learning>
-        Enter here the learning.
+        Enter here the learning.(Only the learning, nothing else)
         </learning>
         """
+
 
         def extract_learning(text):
             return text.split('```')[1].split('<learning>')[1].split("</learning>")[0].strip()
