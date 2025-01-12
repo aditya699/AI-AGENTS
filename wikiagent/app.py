@@ -166,15 +166,9 @@ if st.button("Generate Wiki"):
 
         Note: Do not use curly braces for nodes - use square brackets [] instead. Valid node shapes include:
         - square/rectangle [text]
-        - circle [()]
-        - rounded [()] 
-        - stadium [/text/]
-        - subroutine [[text]]
-        - cylinder [(text)]
-        - circle-double (((text)))
-        - asymmetric >text]
-        - trapezoid [/text\]
-        - reverse-trapezoid [\text/]
+
+        Always have [text] for nodes.do not use brackets or any other special characters inside the brackets([]).
+  
 
         Always follow the XML format strictly(only output the XML format, nothing else).
 
@@ -217,17 +211,11 @@ if st.button("Generate Wiki"):
             end
         ```
 
-        Note: Do not use curly braces  for nodes - use square brackets "[]" instead. Valid node shapes include:
+   
+        Note: Do not use curly braces for nodes - use square brackets [] instead. Valid node shapes include:
         - square/rectangle [text]
-        - circle [()]
-        - rounded [()] 
-        - stadium [/text/]
-        - subroutine [[text]]
-        - cylinder [(text)]
-        - circle-double (((text)))
-        - asymmetric >text]
-        - trapezoid [/text\]
-        - reverse-trapezoid [\text/]
+
+        Always have [text] for nodes.do not use brackets or any other special characters inside the brackets([]).
 
         <mermaid_chart>
         Enter here the mermaid chart.
