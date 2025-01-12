@@ -35,26 +35,15 @@ Forecasted 2025 sales for ABC Corporation's Gamma Soap product using a Random Fo
 
 ```mermaid
 graph LR
-A[Project: Forecast 2025 Gamma Soap Sales for ABC Corp] --> B[Historical Data in Blob Storage];
-B --> C[ETL Pipeline Synapse];
-C --> D[Data Transformation Pandas];
-D --> E[Data in SQL Server];
-E --> F[Random Forest Model sklearn];
+A[Project Gamma Soap Sales Forecast FY2025 for ABC Corporation] --> B[Historical Data in Blob Storage];
+B --> C[ETL Pipeline on Azure Synapse];
+C --> D[Data Transformation];
+D --> E[SQL Server];
+E --> F[Random Forest Model using sklearn];
 F --> G[Sales Forecast];
-G --> A;
-subgraph "Tech Stack"
-C[Synapse]
-F[Python]
-D[Pandas]
-E[SQL Server]
-F[sklearn]
-end
-style A fill:#f9f,stroke:#333,stroke-width:2px
-style G fill:#ccf,stroke:#333,stroke-width:2px
-note right of G
-R2=90%
-Created a story to help the business take great decisions
-end
+G --> H[Story for Business Decisions];
+H --> A;
+H --> M[R2 = 90%];
 ```
 
 ## URLs

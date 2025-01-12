@@ -212,6 +212,8 @@ if st.button("Generate Wiki"):
 
         Make sure the syntax is correct by validating it with the fact that [] is used for nodes and () is not used.Inside the brackets [] we should not use any other special characters or brackets().A Simple flow diagram is what is needed rather than styles and all just arrows and nodes.
 
+        remove all the colors and styles and just keep the arrows and nodes.
+        
         Do not add any other information to the mermaid chart.
         example Input:
         ```mermaid
