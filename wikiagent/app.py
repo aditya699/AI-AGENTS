@@ -5,11 +5,9 @@ NOTE:
 This is a simple agent that will help you generate a wiki page, which made using simple python and langchain no fancy stuff.
 '''
 import os
-from dotenv import load_dotenv
 import re
 import streamlit as st
 
-load_dotenv()
 
 os.environ["GOOGLE_API_KEY"] = st.secrets["GEMINI_API_KEY"]
 
