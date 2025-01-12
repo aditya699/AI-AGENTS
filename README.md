@@ -7,4 +7,6 @@ Lecture 2: Parallelization , Routing
 
 Lecture 3: Orchestration
 
+Lecture 4: Tool Calling, Function Calling
+
 
