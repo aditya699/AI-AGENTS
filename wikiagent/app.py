@@ -152,11 +152,31 @@ if st.button("Generate Wiki"):
 
         example:
         ```mermaid
-        flowchart
-        A --> B
-        B --> C
-        C --> D
+            graph LR
+            A[Project: Forecast Sales FY2025] --> B[Historical Data];
+            B --> C[LSTM Arch];
+            C --> D[Neural Net Training];
+            D --> E[Azure VM GPU];
+            E --> F[PyTorch/Python];
+            F --> G[Sales Forecast];
+            G --> A;
+            subgraph "Tech Stack"
+            F
+            E
+            end
         ```
+        Note: Please ensure your mermaid chart uses valid syntax and node shapes. Valid node shapes include:
+        - square/rectangle (default)
+        - circle [()]
+        - rounded [()] 
+        - hexagon {{text}}
+        - stadium [/text/]
+        - subroutine [[text]]
+        - cylinder [(text)]
+        - circle-double (((text)))
+        - asymmetric >text]
+        - trapezoid [/text\]
+        - reverse-trapezoid [\text/]
 
         Always follow the XML format strictly(only output the XML format, nothing else).
 
@@ -183,6 +203,38 @@ if st.button("Generate Wiki"):
         Do not add any other information to the mermaid chart.
 
         Give the output in the XML format.(only output the XML format, nothing else)
+        example:
+        ```mermaid
+            graph LR
+            A[Project: Forecast Sales FY2025] --> B[Historical Data];
+            B --> C[LSTM Arch];
+            C --> D[Neural Net Training];
+            D --> E[Azure VM GPU];
+            E --> F[PyTorch/Python];
+            F --> G[Sales Forecast];
+            G --> A;
+            subgraph "Tech Stack"
+            F
+            E
+            end
+        ```
+
+        Please check if the mermaid chart syntax is valid and contains only the following node shapes:
+        - 'SQE' (square/rectangle)
+        - 'DOUBLECIRCLEEND' (double circle)
+        - 'PE' (parentheses)
+        - '-)' (rounded)
+        - 'STADIUMEND' (stadium)
+        - 'SUBROUTINEEND' (subroutine)
+        - 'PIPE' (cylinder)
+        - 'CYLINDEREND' (cylinder)
+        - 'DIAMOND_STOP' (diamond)
+        - 'TAGEND' (tag)
+        - 'TRAPEND' (trapezoid)
+        - 'INVTRAPEND' (reverse trapezoid)
+        - 'UNICODE_TEXT' (text)
+        - 'TEXT' (text)
+        - 'TAGSTART' (tag)
 
         <mermaid_chart>
         Enter here the mermaid chart.
