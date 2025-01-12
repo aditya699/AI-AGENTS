@@ -15,8 +15,9 @@ os.environ["GOOGLE_API_KEY"] = os.getenv("GEMINI_API_KEY")
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-st.title("Wiki Page Generator")
+st.header("Wiki Single Page Generator")
 st.write("This is a simple agent that will help you generate a wiki page using Python and Langchain.")
+st.write("This should be used for projects where you want to generate a single page wiki for a project.")
 
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest")
 
@@ -147,7 +148,15 @@ if st.button("Generate Wiki"):
 
         You are also given any special message: {any_special_message}.(Never add any other information to the mermaid chart which is not given to you)
 
-        You need to give a mermaid chart for the project.(The project flow and the tech stack used should be clearly visible in the mermaid chart)
+        You need to give a mermaid chart for the project.(The project flow and the tech stack used should be clearly visible in the mermaid chart,make sure simple flow diagram kind of files)
+
+        example:
+        ```mermaid
+        flowchart
+        A --> B
+        B --> C
+        C --> D
+        ```
 
         Always follow the XML format strictly(only output the XML format, nothing else).
 
@@ -162,6 +171,31 @@ if st.button("Generate Wiki"):
         worker5_response = llm.invoke(worker5_prompt)
         mermaid_chart = extract_mermaid_chart(worker5_response.content)
         st.write("Mermaid Chart:", mermaid_chart)
+
+    with st.spinner("Validating mermaid chart..."):
+        worker7_prompt = f"""
+        You are a mermaid chart expert.
+
+        You are given a mermaid chart: {mermaid_chart}
+
+        Make sure the syntax is correct.
+
+        Do not add any other information to the mermaid chart.
+
+        Give the output in the XML format.(only output the XML format, nothing else)
+
+        <mermaid_chart>
+        Enter here the mermaid chart.
+        </mermaid_chart>
+        """
+
+        def extract_mermaid_chart(text):
+            return text.split('```')[1].split('<mermaid_chart>')[1].split("</mermaid_chart>")[0].strip()
+
+        worker7_response = llm.invoke(worker7_prompt)
+        mermaid_chart = extract_mermaid_chart(worker7_response.content)
+        st.write("Mermaid Chart:", mermaid_chart)
+
 
     with st.spinner("Generating learning..."):
         worker6_prompt = f"""
@@ -208,7 +242,7 @@ if st.button("Generate Wiki"):
 
         (Never add any other information to the md file which is not given to you)
 
-        You need to generate a md file for the project.(Make sure to add following to the md file: Project Description, Methodology, Tech Stack, Other Notes, Mermaid Chart, Urls(If any), and Learning)
+        You need to generate a md file for the project.(Make sure to add following to the md file: Project Description, Methodology, Tech Stack, Other Notes, Mermaid Chart(Architecture), Urls(If any), and Learning)
 
         Always follow the XML format strictly(only output the XML format, nothing else).
 
