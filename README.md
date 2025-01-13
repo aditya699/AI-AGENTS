@@ -10,3 +10,5 @@ Lecture 3: Orchestration
 Lecture 4: Tool Calling, Function Calling
 
 Lecture 5 : Evaluator-Optimizer Workflow
+
+Lecture 6: Use predefined tools from Langchain
