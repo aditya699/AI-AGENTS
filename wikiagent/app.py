@@ -65,7 +65,7 @@ if st.button("Generate Wiki"):
 
         worker1_response = llm.invoke(worker1_prompt)
         project_description = extract_project_description(worker1_response.content)
-        st.write("Project Description:", project_description)
+        st.markdown(project_description,unsafe_allow_html=True)
 
     with st.spinner("Generating methodology..."):
         worker2_prompt = f"""
@@ -90,7 +90,7 @@ if st.button("Generate Wiki"):
 
         worker2_response = llm.invoke(worker2_prompt)
         methodology = extract_methodology(worker2_response.content)
-        st.write("Methodology:", methodology)
+        st.markdown(methodology,unsafe_allow_html=True)
 
     with st.spinner("Generating tech stack..."):
         worker3_prompt = f"""
@@ -118,7 +118,7 @@ if st.button("Generate Wiki"):
         worker3_response = llm.invoke(worker3_prompt)
         print(worker3_response.content)
         tech_stack = extract_tech_stack(worker3_response.content)
-        st.write("Tech Stack:", tech_stack)
+        st.markdown(tech_stack,unsafe_allow_html=True)
 
     with st.spinner("Generating other notes..."):
         worker4_prompt = f"""
@@ -147,7 +147,7 @@ if st.button("Generate Wiki"):
 
         worker4_response = llm.invoke(worker4_prompt)
         other_notes = extract_other_notes(worker4_response.content)
-        st.write("Other Notes:", other_notes)
+        st.markdown(other_notes,unsafe_allow_html=True)
 
 
     llm=ChatGoogleGenerativeAI(model="gemini-1.5-pro",temperature=0)
@@ -201,7 +201,7 @@ if st.button("Generate Wiki"):
 
         worker5_response = llm.invoke(worker5_prompt)
         mermaid_chart = extract_mermaid_chart(worker5_response.content)
-        st.write("Mermaid Chart:", mermaid_chart)
+        st.markdown(mermaid_chart,unsafe_allow_html=True)
 
    
     with st.spinner("Validating mermaid chart..."):
@@ -252,7 +252,7 @@ if st.button("Generate Wiki"):
 
         worker7_response = llm.invoke(worker7_prompt)
         mermaid_chart = extract_mermaid_chart(worker7_response.content)
-        st.write("Mermaid Chart:", mermaid_chart)
+        st.markdown(mermaid_chart,unsafe_allow_html=True)
     llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp",temperature=0)
 
     with st.spinner("Generating learning..."):
@@ -280,7 +280,7 @@ if st.button("Generate Wiki"):
 
         worker6_response = llm.invoke(worker6_prompt)
         learning = extract_learning(worker6_response.content)
-        st.write("Learning:", learning)
+        st.markdown(learning,unsafe_allow_html=True)
 
     with st.spinner("Generating final markdown..."):
         main_prompt = f"""
