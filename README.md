@@ -12,3 +12,5 @@ Lecture 4: Tool Calling, Function Calling
 Lecture 5 : Evaluator-Optimizer Workflow
 
 Lecture 6: Use predefined tools from Langchain
+
+Lecture 7: LLM as a Judge
