@@ -14,3 +14,5 @@ Lecture 5 : Evaluator-Optimizer Workflow
 Lecture 6: Use predefined tools from Langchain
 
 Lecture 7: LLM as a Judge
+
+Lecture 8: Day 1 Langgraph (React architecture)(Bulid any isloated agent)
