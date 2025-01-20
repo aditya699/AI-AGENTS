@@ -18,3 +18,7 @@ Lecture 7: LLM as a Judge
 Lecture 8: Day 1 Langgraph (React architecture)(Bulid any isloated agent)
 
 Lecture 9: Day 2 Langgraph (Bulid a basic chatbot)
+
+Lecture 10: Day 3 Langgraph (Bulid a chain of tools example-research wikipedia agent)
+
+
