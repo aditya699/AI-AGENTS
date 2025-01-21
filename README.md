@@ -1,7 +1,7 @@
 # AI-AGENTS
 AI AGENTS Full Guide
 
-Lecture 1: Prompting chaining , Response Sanitization , Structured Outputs
+[Lecture 1: Prompting chaining , Response Sanitization , Structured Outputs](https://www.youtube.com/watch?v=6jmIyVCVIuc)
 
 Lecture 2: Parallelization , Routing
 
@@ -21,4 +21,5 @@ Lecture 9: Day 2 Langgraph (Bulid a basic chatbot)
 
 Lecture 10: Day 3 Langgraph (Bulid a chain of tools example-research wikipedia agent)
 
+Lecture 11: Day 4 Langgraph (Simple tooling with Langgraph and bulid a research agent)
 
