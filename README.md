@@ -14,4 +14,5 @@ AI AGENTS Full Guide
 | Lecture 9 | Day 2 Langgraph (Build a basic chatbot) | Coming Soon |
 | Lecture 10 | Day 3 Langgraph (Build a chain of tools example-research wikipedia agent) | Coming Soon |
 | Lecture 11 | Day 4 Langgraph (Simple tooling with Langgraph and build a research agent) | Coming Soon |
+| Lecture 12 | Day 5 Langgraph (Adding memory to the agent)(Custom Support example) | Coming Soon |
 
