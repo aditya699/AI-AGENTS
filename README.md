@@ -4,7 +4,7 @@ AI AGENTS Full Guide
 | Topic | What We Learn | Video Link |
 |-------|---------------|------------|
 | Lecture 1 | Prompting chaining, Response Sanitization, Structured Outputs | [Watch Video](https://www.youtube.com/watch?v=6jmIyVCVIuc) |
-| Lecture 2 | Parallelization, Routing | Coming Soon |
+| Lecture 2 | Parallelization, Routing | [Watch Video](https://youtu.be/iZWfeJ6tQkI) |
 | Lecture 3 | Orchestration | Coming Soon |
 | Lecture 4 | Tool Calling, Function Calling | Coming Soon |
 | Lecture 5 | Evaluator-Optimizer Workflow | Coming Soon |
