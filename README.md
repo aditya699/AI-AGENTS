@@ -5,7 +5,7 @@ AI AGENTS Full Guide
 |-------|---------------|------------|
 | Lecture 1 | Prompting chaining, Response Sanitization, Structured Outputs | [Watch Video](https://www.youtube.com/watch?v=6jmIyVCVIuc) |
 | Lecture 2 | Parallelization, Routing | [Watch Video](https://youtu.be/iZWfeJ6tQkI) |
-| Lecture 3 | Orchestration | Coming Soon |
+| Lecture 3 | Orchestration | [Watch Video](https://www.youtube.com/watch?v=ZcqIAngxzbE&t=98s) |
 | Lecture 4 | Tool Calling, Function Calling | Coming Soon |
 | Lecture 5 | Evaluator-Optimizer Workflow | Coming Soon |
 | Lecture 6 | Use predefined tools from Langchain | Coming Soon |
@@ -16,4 +16,5 @@ AI AGENTS Full Guide
 | Lecture 11 | Day 4 Langgraph (Simple tooling with Langgraph and build a research agent) | Coming Soon |
 | Lecture 12 | Day 5 Langgraph (Adding memory to the agent)(Custom Support example) | Coming Soon |
 | Lecture 13 | Understanding Chatbots and token usage and agentic memory(trim,filtering,summary) in pure python | Coming Soon |
+| Lecture 14 | Day 6 Langraph (Trim and Filtering messages) Demo | Coming Soon |
 
