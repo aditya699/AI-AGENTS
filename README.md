@@ -26,4 +26,3 @@ Welcome to the comprehensive AI Agents guide! Below you'll find an overview of a
 | **Lecture 13** | Understanding Chatbots, Token Usage, and Agentic Memory (Trim, Filter, Summary) in Pure Python | Coming Soon   |
 | **Lecture 14** | Day 6 Langgraph: Trim and Filter Messages Demo                | Coming Soon   |
 | **Lecture 15** | Langsmith + Summarization                                      | Coming Soon   |
-```
