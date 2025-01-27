@@ -9,12 +9,12 @@ Welcome to the comprehensive AI Agents guide! Below you'll find an overview of a
 | **Lecture 1** | Prompt Chaining, Response Sanitization, Structured Outputs       | [Watch Video](https://www.youtube.com/watch?v=6jmIyVCVIuc)                                     |
 | **Lecture 2** | Parallelization, Routing                                        | [Watch Video](https://youtu.be/iZWfeJ6tQkI)                                                   |
 | **Lecture 3** | Orchestration                                                   | [Watch Video](https://www.youtube.com/watch?v=ZcqIAngxzbE&t=98s)                              |
+| **Lecture 4** | Tool Calling, Function Calling                                 | [Watch Video](https://youtu.be/EobTqTxP5OM)   |
 
 ## Upcoming Lectures
 
 | Lecture   | Topics Covered                                                    | Status        |
 |-----------|-------------------------------------------------------------------|---------------|
-| **Lecture 4** | Tool Calling, Function Calling                                 | Coming Soon   |
 | **Lecture 5** | Evaluator-Optimizer Workflow                                  | Coming Soon   |
 | **Lecture 6** | Using Predefined Tools from Langchain                          | Coming Soon   |
 | **Lecture 7** | LLM as a Judge                                               | Coming Soon   |
