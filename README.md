@@ -10,12 +10,13 @@ Welcome to the comprehensive AI Agents guide! Below you'll find an overview of a
 | **Lecture 2** | Parallelization, Routing                                        | [Watch Video](https://youtu.be/iZWfeJ6tQkI)                                                   |
 | **Lecture 3** | Orchestration                                                   | [Watch Video](https://www.youtube.com/watch?v=ZcqIAngxzbE&t=98s)                              |
 | **Lecture 4** | Tool Calling, Function Calling                                 | [Watch Video](https://youtu.be/EobTqTxP5OM)   |
+| **Lecture 5** | Evaluator-Optimizer Workflow                                  | [Watch Video](https://www.youtube.com/watch?v=J1lRZKPniLE)  |
 
 ## Upcoming Lectures
 
 | Lecture   | Topics Covered                                                    | Status        |
 |-----------|-------------------------------------------------------------------|---------------|
-| **Lecture 5** | Evaluator-Optimizer Workflow                                  | Coming Soon   |
+
 | **Lecture 6** | Using Predefined Tools from Langchain                          | Coming Soon   |
 | **Lecture 7** | LLM as a Judge                                               | Coming Soon   |
 | **Lecture 8** | Day 1 Langgraph: React Architecture & Building Isolated Agents | Coming Soon   |
