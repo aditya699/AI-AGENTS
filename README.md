@@ -16,7 +16,6 @@ Welcome to the comprehensive AI Agents guide! Below you'll find an overview of a
 
 | Lecture   | Topics Covered                                                    | Status        |
 |-----------|-------------------------------------------------------------------|---------------|
-
 | **Lecture 6** | Using Predefined Tools from Langchain                          | Coming Soon   |
 | **Lecture 7** | LLM as a Judge                                               | Coming Soon   |
 | **Lecture 8** | Day 1 Langgraph: React Architecture & Building Isolated Agents | Coming Soon   |
