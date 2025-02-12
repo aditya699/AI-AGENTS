@@ -13,7 +13,7 @@ Welcome to the comprehensive AI Agents guide! Below you'll find an overview of a
 | **Lecture 5** | Evaluator-Optimizer Workflow                                  | [Watch Video](https://www.youtube.com/watch?v=J1lRZKPniLE)  |
 | **Lecture 6** | Using Predefined Tools from Langchain                          | [Watch Video](https://youtu.be/cBSeh3t1hyI)  |
 | **Lecture 7** | LLM as a Judge                                               | [Watch Video](https://www.youtube.com/watch?v=q9TQibl7B-E) |
-| **Lecture 8** | Day 1 Langgraph: React Architecture & Building Isolated Agents | [Watch Video](https://www.youtube.com/watch?v=DZscPVMTkAo&list=PLSdiMs6f-QAe57Eq4-uADUdKfAJdgyxh0 |
+| **Lecture 8** | Day 1 Langgraph: React Architecture & Building Isolated Agents |[Watch Video](https://www.youtube.com/watch?v=DZscPVMTkAo&list=PLSdiMs6f-QAe57Eq4-uADUdKfAJdgyxh0) |
 | **Lecture 9** | Day 2 Langgraph: Building a Basic Chatbot                      | [Watch Video](https://youtu.be/NLehx3QMqJE) |
 
 ## Upcoming Lectures
