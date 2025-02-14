@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+os.environ["GEMINI_API_KEY"]=os.getenv("GEMINI_API_KEY")
 #Define output structure
 class Response(BaseModel):
     rating:int

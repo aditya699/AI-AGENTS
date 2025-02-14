@@ -27,3 +27,4 @@ Welcome to the comprehensive AI Agents guide! Below you'll find an overview of a
 | **Lecture 14** | Day 6 Langgraph: Trim and Filter Messages Demo                | Coming Soon   |
 | **Lecture 15** | Langsmith + Summarization                                      | Coming Soon   |
 | **Lecture 16** | Stream Response + Browser Use +Some comments on Langgraph    | Coming Soon   |
+| **Lecture 17** | PydanticAI: FastAPI for GenAI Apps(Everything you need to know about Pydantic) | Coming Soon   |
