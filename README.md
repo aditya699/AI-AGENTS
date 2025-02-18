@@ -15,13 +15,12 @@ Welcome to the comprehensive AI Agents guide! Below you'll find an overview of a
 | **Lecture 7** | LLM as a Judge                                               | [Watch Video](https://www.youtube.com/watch?v=q9TQibl7B-E) |
 | **Lecture 8** | Day 1 Langgraph: React Architecture & Building Isolated Agents |[Watch Video](https://www.youtube.com/watch?v=DZscPVMTkAo&list=PLSdiMs6f-QAe57Eq4-uADUdKfAJdgyxh0) |
 | **Lecture 9** | Day 2 Langgraph: Building a Basic Chatbot                      | [Watch Video](https://youtu.be/NLehx3QMqJE) |
-
+| **Lecture 10** | Day 3 Langgraph: Building a Chain of Tools (Research Wikipedia Agent) | [Watch Video](https://www.youtube.com/watch?v=qCFeDy54ib0&list=PLSdiMs6f-QAe57Eq4-uADUdKfAJdgyxh0)   |
+| **Lecture 11** | Day 4 Langgraph: Simple Tooling & Building a Research Agent    | [Watch Video](https://www.youtube.com/watch?v=tF11rMobFW8&list=PLSdiMs6f-QAe57Eq4-uADUdKfAJdgyxh0&index=11)   |
 ## Upcoming Lectures
 
 | Lecture   | Topics Covered                                                    | Status        |
 |-----------|-------------------------------------------------------------------|---------------|
-| **Lecture 10** | Day 3 Langgraph: Building a Chain of Tools (Research Wikipedia Agent) | Coming Soon   |
-| **Lecture 11** | Day 4 Langgraph: Simple Tooling & Building a Research Agent    | Coming Soon   |
 | **Lecture 12** | Day 5 Langgraph: Adding Memory to the Agent (Custom Support Example) | Coming Soon   |
 | **Lecture 13** | Understanding Chatbots, Token Usage, and Agentic Memory (Trim, Filter, Summary) in Pure Python | Coming Soon   |
 | **Lecture 14** | Day 6 Langgraph: Trim and Filter Messages Demo                | Coming Soon   |
