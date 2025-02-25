@@ -3,3 +3,5 @@ pydantic
 python-dotenv
 google-search-results
 matplotlib
+langchain-community
+unstructured
