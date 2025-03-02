@@ -34,8 +34,8 @@ def get_search_query(client, user_query, input_token_tracker, output_token_track
         # Update token trackers
         input_token_tracker += completion.usage.prompt_tokens
         output_token_tracker += completion.usage.completion_tokens
-        print(f"Tokens used - Input: {completion.usage.prompt_tokens}, Output: {completion.usage.completion_tokens}")
-        print("LLM response generated successfully")
+        # print(f"Tokens used - Input: {completion.usage.prompt_tokens}, Output: {completion.usage.completion_tokens}")
+        # print("LLM response generated successfully")
 
         search_query = completion.choices[0].message.parsed
         print("Generated search query:", search_query.query)

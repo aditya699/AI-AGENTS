@@ -33,8 +33,8 @@ def get_research_queries(client, search_query, input_token_tracker, output_token
         # Update token trackers
         input_token_tracker += completion.usage.prompt_tokens
         output_token_tracker += completion.usage.completion_tokens
-        print(f"Tokens used - Input: {completion.usage.prompt_tokens}, Output: {completion.usage.completion_tokens}")
-        print("LLM response generated successfully")
+        # print(f"Tokens used - Input: {completion.usage.prompt_tokens}, Output: {completion.usage.completion_tokens}")
+        # print("LLM response generated successfully")
 
         research_queries = completion.choices[0].message.parsed
         print("Generated research queries:", research_queries.queries)

@@ -10,7 +10,7 @@ def initialize_trackers():
 
 def update_and_display_metrics(input_token_tracker, output_token_tracker, model):
     """Update and display token usage metrics and cost"""
-    print("\n--- Updating Metrics ---")
+    # print("\n--- Updating Metrics ---")
     total_tokens = input_token_tracker + output_token_tracker
     
     if model == "mini":
@@ -20,8 +20,8 @@ def update_and_display_metrics(input_token_tracker, output_token_tracker, model)
         mini_input_cost = 3.30  # per million tokens
         mini_output_cost = 13.20  # per million tokens
 
-    print(f"Input tokens used: {input_token_tracker}")
-    print(f"Output tokens used: {output_token_tracker}")
+    # print(f"Input tokens used: {input_token_tracker}")
+    # print(f"Output tokens used: {output_token_tracker}")
 
         # For mini deployment
     mini_input_cost_total = (input_token_tracker / 1_000_000) * mini_input_cost
@@ -33,10 +33,4 @@ def update_and_display_metrics(input_token_tracker, output_token_tracker, model)
     # Convert to rupees (1 USD = 87 INR)
     current_cost_inr = current_cost * 87
     
-    print(f"Total token count: {total_tokens}")
-    print(f"Input cost: ${ mini_input_cost_total:.5f}")
-    print(f"Output cost: ${ mini_output_cost_total:.5f}")
-    print("Current script running cost: ${:.5f} (₹{:.2f})".format(current_cost, current_cost_inr))
-    print("--- Metrics Updated ---\n")
-    
-    return total_tokens, current_cost
+    return current_cost_inr
