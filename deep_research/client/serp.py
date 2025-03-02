@@ -18,7 +18,8 @@ def get_search_links(query, num_results=5):
     params = {
         "engine": "google",
         "q": query,
-        "api_key": os.getenv("SERP_API_KEY")
+        "api_key": os.getenv("SERP_API_KEY"),
+        "num": num_results
     }
     
     search = GoogleSearch(params)

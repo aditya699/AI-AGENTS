@@ -5,3 +5,5 @@ google-search-results
 matplotlib
 langchain-community
 unstructured
+unstructured[pdf]
+python-docx
