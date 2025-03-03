@@ -87,7 +87,7 @@ def main():
     print("Input Token Usage: ", input_token_tracker)
     print("Output Token Usage: ", output_token_tracker)
     print(f"Current Cost in ₹: {current_cost_inr:.5f}")
-    research_queries_list=research_queries.queries[0:2]
+    research_queries_list=research_queries.queries
     # print("For this run we are taking only 2 research queries to save cost and response time")
     # print("Research Queries: ", research_queries_list)
     master_data=[]
