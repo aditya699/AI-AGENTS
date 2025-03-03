@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-def get_search_links(query, num_results=5):
+def get_search_links(query, num_results=10):
     """
     Perform a Google search and return the top links from organic results.
     
