@@ -22,9 +22,33 @@ Welcome to the ultimate AI Agents journey! This comprehensive guide will take yo
 | **Lecture 14** | ✂️ Day 6 Langgraph: Trim and Filter Messages Demo | [🎬 Watch](https://www.youtube.com/watch?v=iCaSFba199Y&list=PLSdiMs6f-QAe57Eq4-uADUdKfAJdgyxh) |
 | **Lecture 15** | 📝 Langsmith + Summarization | [🎬 Watch](https://www.youtube.com/watch?v=1RfrO2QeFGQ&list=PLSdiMs6f-QAe57Eq4-uADUdKfAJdgyxh0&index=1) |
 | **Lecture 16** | 🌊 Stream Response + 🌐 Browser Use + 💭 Some comments on Langgraph | [🎬 Watch](https://www.youtube.com/watch?v=6rrKc4YV-gE&list=PLSdiMs6f-QAe57Eq4-uADUdKfAJdgyxh0&index=16) |
+| **Lecture 17** | 🔮 PydanticAI: FastAPI for GenAI Apps (Everything you need to know about Pydantic) | [🎬 Watch](https://youtu.be/tQ4dHimAUOM) |
 
 ## 🚀 Upcoming Lectures
+Stay tuned for many more exciting lectures coming soon! Subscribe to get notified when new content is released.
 
-| Lecture | Topics Covered | Status |
-|:-------:|----------------|:------:|
-| **Lecture 17** | 🔮 PydanticAI: FastAPI for GenAI Apps (Everything you need to know about Pydantic) | 🔜 Coming Soon |
+## 🔗 Connect With Me
+
+<div align="center">
+  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adityaabhatt/)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@adityabhatt4173)
+[![Website](https://img.shields.io/badge/Website-00979D?style=for-the-badge&logo=internetexplorer&logoColor=white)](https://aiwithaditya.odoo.com/)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/your_data_scientist/)
+
+</div>
+
+## 💡 Why This Course?
+
+This comprehensive AI Agents course is designed to take you from the fundamentals to advanced concepts in building intelligent agents. Whether you're a beginner or an experienced developer, you'll find valuable insights and practical implementations that you can apply to your own projects.
+
+## 📚 Resources
+
+All code examples and additional resources mentioned in the lectures are available in this repository. Feel free to explore, experiment, and build upon these examples!
+
+## 🙏 Support
+
+If you find this content helpful, consider:
+- ⭐ Starring this repository
+- 🔔 Subscribing to my [YouTube channel](https://www.youtube.com/@adityabhatt4173)
+- 📢 Sharing with others who might benefit
